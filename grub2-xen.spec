@@ -8,13 +8,13 @@
 %define _sourcedir %(pwd)
 %endif
 
-%global tarversion 2.04
+%global tarversion 2.06
 %undefine _missing_build_ids_terminate_build
 
 %global _configure ../configure
 
 Name:           grub2-xen
-Version:        2.04
+Version:        2.06
 Release:        1%{?dist}
 Summary:        Bootloader with support for Linux, Multiboot and more, for Xen PV
 
@@ -29,7 +29,7 @@ Patch0:         grub-alias-linux16.patch
 BuildRequires:  gcc
 BuildRequires:  flex bison binutils python
 BuildRequires:  ncurses-devel xz-devel
-BuildRequires:  freetype-devel libusb-devel
+BuildRequires:  freetype-devel fuse-devel
 %ifarch %{sparc} x86_64
 # sparc builds need 64 bit glibc-devel - also for 32 bit userland
 BuildRequires:  /usr/lib64/crt1.o glibc-static
